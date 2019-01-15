@@ -145,6 +145,7 @@ public class CallbackConnection {
     }
 
     void reconnect() {
+    		reconnects += 1;
         try {
             // And reconnect.
             createTransport(new LoginHandler(new Callback<Void>() {
